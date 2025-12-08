@@ -11,4 +11,20 @@ app.use(cookieParser())
 app.get("/", ((req, res) => {
     res.render("index")
 }))
+app.post("/create", async (req, res) => {
+    try {
+        let { username, age, password, email } = req.body;
+
+        let user = await userModel.create({
+            username,
+            email,
+            age,
+            password
+        });
+
+        res.send(user);
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+});
 app.listen(3000)

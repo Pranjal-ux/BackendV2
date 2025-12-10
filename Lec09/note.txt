@@ -1,0 +1,2 @@
+hash pass - $2b$10$TGREHPWrynWSix15sBlxNubGfC58nQU7pvA5E187XH2tGT93iywk6
+pass - abcd

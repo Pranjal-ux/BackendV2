@@ -15,12 +15,21 @@ app.post('/notes', (req, res) => {
 })
 
 //Get api
-app.get('/notes',((req,res)=>{
-res.status(200).json({
-    message:"notes fetch  succssfully",
-    notes:notes
-})
+app.get('/notes', ((req, res) => {
+    res.status(200).json({
+        message: "notes fetch  succssfully",
+        notes: notes
+    })
 
+}))
+
+//Delete api
+app.delete('/notes/:index', ((req, res) => {
+    const index = req.params.index
+    delete notes[index]
+    res.status(200).json({
+        message: "Api deleted successfully"
+    })
 }))
 
 module.exports = app

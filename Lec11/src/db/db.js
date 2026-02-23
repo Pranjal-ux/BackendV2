@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
+
 let connectDb = async () => {
-  await mongoose.connect(
-    "mongodb+srv://pranjal:kEatBhrbMNSyDKJf@cluster0.v3jwstc.mongodb.net/Omega",
+  await mongoose.connect(process.env.MONGODB_URL
   );
 
 
   console.log("Connent to Db")
 };
-module.exports= connectDb
+module.exports = connectDb

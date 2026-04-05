@@ -1,6 +1,9 @@
-const dotenv = require('dotenv').config()
+require('dotenv').config()
 const app = require('./src/app')
+const db = require("./src/db/post.db")
 
-app.listen(3000, () => {
-    console.log("Server is started")
-})
+db().then(() => {
+    app.listen(3000, () => {
+        console.log("Server running on port 3000");
+    });
+});

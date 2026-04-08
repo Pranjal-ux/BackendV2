@@ -41,4 +41,4 @@ async function regiseterUser(req, res) {
     })
 }
 
-module.exports = regiseterUser
+module.exports = { regiseterUser }

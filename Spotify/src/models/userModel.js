@@ -20,5 +20,6 @@ const userSchema = new mongoose.Schema({
     enum:['user','artist']
     }
 })
-module.exports = userSchema
+const userModel = mongoose.model('user',userSchema)
+module.exports = userModel;
 

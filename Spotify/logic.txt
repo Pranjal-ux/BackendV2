@@ -1,0 +1,22 @@
+logic for performing loggin operation....
+
+$or:{
+    [
+        {usermame = undefined}
+        {email  }
+    ]
+}
+
+
+
+
+user1{
+username:pranjal
+email:a@a.com
+password:undefined
+}
+user2{
+username:harsh
+email:b@a.com
+password:undefined
+}

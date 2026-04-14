@@ -15,6 +15,6 @@ const musicSchema = new mongoose.Schema({
         required: true
     }
 })
-const artistModel = model.create("artist", musicSchema)
+const artistModel = mongoose.model("artist", musicSchema)
 
 module.exports = artistModel;

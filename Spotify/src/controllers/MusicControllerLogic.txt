@@ -15,3 +15,5 @@
 ->Then we return status 401 
 
 -> If it's artist then it's create the music
+
+-> Now we install imageKit , then set the privateKey

@@ -1,0 +1,17 @@
+-> First we take token from req.cookie.token
+
+-> Then we need to verify the req is authorised or not 
+
+-> If the token is not availabe in the request mean the user is unauthorised we need to return the status(401)
+
+-> Then jwt.verify for verifying the token is valid or not 
+
+-> If the token is not match then we return the status(401)
+
+-> If match then we hold the value of that token in some verifable 
+
+-> if(decode!="artist")
+
+->Then we return status 401 
+
+-> If it's artist then it's create the music

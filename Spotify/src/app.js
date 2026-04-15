@@ -6,11 +6,12 @@ const authRoutes = require('./routers/authRoute')
 const musicRouter = require('./routers/musicRouter')
 
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 
 
 app.use('/api/auth', authRoutes)
-app.use('/api/music',musicRouter)
+app.use('/api/music', musicRouter)
 
 
 

@@ -4,13 +4,13 @@ const ImageKitClient = new ImageKit({
     privateKey: process.env.imageKit_privateKey
 })
 const uploadFile = async (file) => {
-    const result = await ImageKit.Files.upload({
+    const result = await ImageKitClient.files.upload({
         file,
         filename: "music_" + Date.now,
-        folder: BackendV2 / spotifyMusics
+        folder: "BackendV2/spotifyMusics"
     })
     return result
 }
 
 
-module.exports = {uploadFile} 
+module.exports = { uploadFile } 
